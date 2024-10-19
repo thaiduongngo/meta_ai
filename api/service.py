@@ -1,4 +1,5 @@
 import ollama
+from typing import List, Dict
 
 
 gemma2 = "gemma2"
@@ -12,10 +13,10 @@ llm_options = {
 
 
 def _gen_content(
-    prompts:[str],
+    prompts:List,
     system_prompt:str=None,
     model:str="llama3.2",
-    options:{}=None) -> str:
+    options:Dict=None) -> str:
 
     if options is None:
         options = {}
